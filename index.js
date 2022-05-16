@@ -31,9 +31,6 @@ const merchant = process.env.MERCHANT;
 const ssl = fs.readFileSync(process.env.CRT);
 const key = fs.readFileSync(process.env.KEY);
 
-fs.writeFileSync("ssl.txt", ssl);
-fs.writeFileSync("key.txt", key);
-
 const auth = {
   user: "merchant." + merchant,
   pass: process.env.PASSWORD,
@@ -321,5 +318,8 @@ function process3dsResult(requestData, orderId, transactionId, callback) {
 }
 
 app.listen(PORT, () => {
+  fs.writeFileSync("ssl.txt", ssl);
+  fs.writeFileSync("key.txt", key);
+
   console.log("app run on port:" + PORT);
 });
