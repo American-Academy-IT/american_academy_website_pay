@@ -28,6 +28,11 @@ app.use((req, _res, next) => {
 const baseUrl = process.env.BASE_URL;
 const apiVersion = process.env.API_VERSION;
 const merchant = process.env.MERCHANT;
+const ssl = fs.readFileSync(process.env.CRT);
+const key = fs.readFileSync(process.env.KEY);
+
+fs.writeFileSync("ssl.txt", ssl);
+fs.writeFileSync("key.txt", key);
 
 const auth = {
   user: "merchant." + merchant,
@@ -36,9 +41,9 @@ const auth = {
 };
 
 const agentOptions = {
-  cert: fs.readFileSync(process.env.CRT),
-  key: fs.readFileSync(process.env.KEY),
-  passphrase: process.env.MERCHANT,
+  cert: ssl,
+  key: key,
+  passphrase: merchant,
 };
 
 app.use(express.static(__dirname + "/public"));
@@ -60,7 +65,6 @@ app.post("/check3dsEnrollment", function (request, response, next) {
   request.session.securityVariable = getSecureId();
   get3DSData(orderAmount, orderCurrency);
   setSessionVariables(sessionId, secureId);
-  console.log(request);
 
   check3dsEnrollment(apiOperation, sessionId, function (error, result) {
     if (!error) {
@@ -92,7 +96,6 @@ app.post("/check3dsEnrollment", function (request, response, next) {
           next();
         } else {
           var secure = body["3DSecure"];
-          console.log(body);
           var htmlcontent =
             secure.authenticationRedirect.simple.htmlBodyContent;
           const dom = new JSDOM(htmlcontent);
