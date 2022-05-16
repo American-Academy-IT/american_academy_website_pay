@@ -49,9 +49,9 @@ app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
 app.get("/api", (req, res) => {
-  fs.writeFileSync("ssl.txt", ssl);
-  fs.writeFileSync("key.txt", key);
-  res.send("hi mama");
+ // fs.writeFileSync("ssl.txt", ssl);
+ // fs.writeFileSync("key.txt", key);
+	    res.status(200).json({ dir: __dirname });
 });
 
 app.post("/check3dsEnrollment", function (request, response, next) {
@@ -90,12 +90,12 @@ app.post("/check3dsEnrollment", function (request, response, next) {
       check3dsEnrollmentAccess(secureId, requestData, function (err, body) {
         if (err) {
           const result = err;
-          response.render("apiResponse", result);
+          // response.render("apiResponse", result);
           next();
         }
         if (body.error) {
           const result = body.error.cause;
-          response.render("apiResponse", result);
+          // response.render("apiResponse", result);
           next();
         } else {
           var secure = body["3DSecure"];
@@ -160,8 +160,8 @@ app.post("/process3ds", function (request, response, next) {
       process3dsResult(payload, orderId, transactionId, function (finalresult) {
         var data = JSON.stringify(finalresult.message);
         if (data.error) {
-          const result = data.error;
-          response.render("apiResponse", result);
+          // const result = data.error;
+          // response.render("apiResponse", result);
         } else {
           var url = finalresult.url;
           var reqPayload = JSON.stringify(payload);
@@ -259,7 +259,7 @@ function check3dsEnrollmentAccess(secureId, requestData, callback) {
   var options = {
     url: url,
     json: requestData,
-    // auth,
+    auth,
     agentOptions,
   };
   request.put(options, function (error, response, body) {
@@ -280,7 +280,7 @@ function process3ds(requestData, secureId, callback) {
     url: requestUrl,
     method: "POST",
     json: requestData,
-    // auth,
+    auth,
     agentOptions,
   };
   return request(options, function (error, response, body) {
@@ -303,7 +303,7 @@ function process3dsResult(requestData, orderId, transactionId, callback) {
     url: requestUrl,
     method: "PUT",
     json: requestData,
-    // auth,
+    auth,
     agentOptions,
   };
   return request(options, function (error, response, body) {
