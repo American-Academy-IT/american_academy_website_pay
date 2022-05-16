@@ -89,7 +89,7 @@ app.post("/check3dsEnrollment", function (request, response, next) {
       };
       check3dsEnrollmentAccess(secureId, requestData, function (err, body) {
         if (err) {
-          const result = err;
+          // const result = err;
           // response.render("apiResponse", result);
           next();
         }
@@ -259,7 +259,7 @@ function check3dsEnrollmentAccess(secureId, requestData, callback) {
   var options = {
     url: url,
     json: requestData,
-    auth,
+    // auth,
     agentOptions,
   };
   request.put(options, function (error, response, body) {
@@ -280,7 +280,7 @@ function process3ds(requestData, secureId, callback) {
     url: requestUrl,
     method: "POST",
     json: requestData,
-    auth,
+    // auth,
     agentOptions,
   };
   return request(options, function (error, response, body) {
@@ -303,7 +303,7 @@ function process3dsResult(requestData, orderId, transactionId, callback) {
     url: requestUrl,
     method: "PUT",
     json: requestData,
-    auth,
+    // auth,
     agentOptions,
   };
   return request(options, function (error, response, body) {
