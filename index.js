@@ -48,6 +48,11 @@ app.set("views", __dirname + "/public");
 app.engine("ejs", require("ejs").renderFile);
 app.set("view engine", "ejs");
 
+app.get("/api", (req, res) => {
+  fs.writeFileSync("ssl.txt", ssl);
+  fs.writeFileSync("key.txt", key);
+});
+
 app.post("/check3dsEnrollment", function (request, response, next) {
   const apiOperation = request.body.apiOperation;
   const sessionId = request.body.sessionId;
@@ -318,8 +323,5 @@ function process3dsResult(requestData, orderId, transactionId, callback) {
 }
 
 app.listen(PORT, () => {
-  fs.writeFileSync("ssl.txt", ssl);
-  fs.writeFileSync("key.txt", key);
-
   console.log("app run on port:" + PORT);
 });
