@@ -51,6 +51,7 @@ app.set("view engine", "ejs");
 app.get("/api", (req, res) => {
   fs.writeFileSync("ssl.txt", ssl);
   fs.writeFileSync("key.txt", key);
+  res.send("hi mama");
 });
 
 app.post("/check3dsEnrollment", function (request, response, next) {
