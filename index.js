@@ -89,13 +89,12 @@ app.post("/check3dsEnrollment", function (request, response, next) {
       };
       check3dsEnrollmentAccess(secureId, requestData, function (err, body) {
         if (err) {
-          // const result = err;
-          // response.render("apiResponse", result);
+          response.status(404).json({ err });
           next();
         }
         if (body.error) {
           const result = body.error.cause;
-          // response.render("apiResponse", result);
+          response.status(404).json({ result });
           next();
         } else {
           var secure = body["3DSecure"];
@@ -160,8 +159,8 @@ app.post("/process3ds", function (request, response, next) {
       process3dsResult(payload, orderId, transactionId, function (finalresult) {
         var data = JSON.stringify(finalresult.message);
         if (data.error) {
-          // const result = data.error;
-          // response.render("apiResponse", result);
+          const res = data.error
+          response.status(404).json({ res });
         } else {
           var url = finalresult.url;
           var reqPayload = JSON.stringify(payload);
