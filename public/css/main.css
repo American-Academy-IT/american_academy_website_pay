@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+button[class="btn apply-course"]{
+  background-color: rgb(211, 0, 0);
+  padding: 10px 10px;
+  margin: 20px 0px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -615,7 +624,7 @@ header {
 
 /* Start section home-cover */
 .home-cover {
-  background-image: url("../Assets/Images/home-cover.jpg");
+  background-image: url("../Assets/Images/home-cover.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1655,10 +1664,6 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   color: #646363;
   font-size: 14px;
 }
-
-.smc .box img {
-  border-radius: 5px;
-}
 /* End section smc */
 
 /* pmp page */
@@ -1915,6 +1920,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 .french-for-kids .box img {
   border-radius: 5px;
+  width: 70%;
 }
 /* End section french for kids */
 
@@ -1946,6 +1952,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   border: none;
   padding: 10px 15px;
   transition: all .5s;
+  border-radius: 5px;
 }
 
 .toefl-exam button:hover{
@@ -2214,11 +2221,10 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 }
 /* End section maadi-branch */
 
-
 /* Payment page */
 /* Start section payment */
 .payment{
-  background: #e9ecef;
+  background-color: black;
   overflow: hidden;
   max-width: 100%;
 }
@@ -2251,6 +2257,7 @@ padding: 60px;
 }
 
 .payment .form-content .form-items {
+border: 3px solid #fff;
 padding: 40px;
 display: inline-block;
 width: 100%;
@@ -2261,7 +2268,6 @@ border-radius: 10px;
 text-align: left;
 -webkit-transition: all 0.4s ease;
 transition: all 0.4s ease;
-  background: #adb5bd;
 }
 
 .payment .form-content h3 {
@@ -2349,13 +2355,12 @@ margin-top: -9px !important;
 margin-bottom: 8px !important;
 }
 
-#invalid-feedback{
-  color: #ff606e;
-  margin: 0;
+.payment .invalid-feedback{
+color: #ff606e;
 }
 
 .payment .valid-feedback{
-  color: #2acc80;
+color: #2acc80;
 }
 
 .payment form input{
@@ -2606,6 +2611,60 @@ margin-bottom: 8px !important;
   bottom: 59px;
 }
 /* End section jobs-form */
+
+/* Integrated page */
+/* Start section Integrated */
+.integrated h2{
+  color: #db0000;
+}
+
+.integrated .instructions{
+  direction: rtl;
+  text-align: right;
+}
+
+.integrated .instructions p[class="font-weight-bold second pb-3"]{
+  color: #db0000;
+}
+
+.integrated .instructions ul{
+  list-style: disc;
+}
+/* End section Integrated */
+
+/* Course-policy page */
+/* Start section Course-policy */
+.course-policy h2{
+  color: #db0000;
+}
+
+.course-policy .instructions{
+  direction: rtl;
+  text-align: right;
+}
+
+.course-policy .instructions p[class="font-weight-bold second pb-3"]{
+  color: #db0000;
+}
+
+.course-policy .instructions ul{
+  list-style: decimal;
+}
+
+.course-policy .instructions ul[class="second"]{
+  list-style: lower-alpha;
+  padding-right: 27px;
+  padding-top: 27px;
+}
+/* End section course-policy */
+
+/* page-error page */
+/* Start section page-error */
+.page-error .box-content img{
+  max-width: 211px;
+}
+
+/* End section page-error */
 
 
 
