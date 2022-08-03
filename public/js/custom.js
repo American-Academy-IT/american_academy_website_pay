@@ -1,7 +1,7 @@
 //Scroll to top function
 let span = document.querySelector(".up");
 window.onscroll = function () {
-    console.log(this.scrollY);
+    // console.log(this.scrollY);
     if (this.scrollY >= 800) {
         span.classList.add("show");
     } else {
@@ -32,13 +32,13 @@ span.onclick = function () {
 })();
 
 //Post Method function
-async function onSubmit(e) {
-  e.preventDefault();
-  const res = await fetch("", {
-  method: "POST",
-  });
-  console.log(res);
-}
+// async function onSubmit(e) {
+//   e.preventDefault();
+//   const res = await fetch("", {
+//   method: "POST",
+//   });
+//   console.log(res);
+// }
 
 //Scroll Reveal library Function
 ScrollReveal({
@@ -73,15 +73,15 @@ function removeActiveClass() {
 }
 
 //Input dropdown function
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-const optionsList = document.querySelectorAll(".option");
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-});
-optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
-  });
-});
+// const selected = document.querySelector(".selected");
+// const optionsContainer = document.querySelector(".options-container");
+// const optionsList = document.querySelectorAll(".option");
+// selected.addEventListener("click", () => {
+//   optionsContainer.classList.toggle("active");
+// });
+// optionsList.forEach(o => {
+//   o.addEventListener("click", () => {
+//     selected.innerHTML = o.querySelector("label").innerHTML;
+//     optionsContainer.classList.remove("active");
+//   });
+// });
