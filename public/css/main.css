@@ -5,6 +5,26 @@
   box-sizing: border-box;
 }
 
+.bg-black {
+  background-color: #000;
+}
+
+.captcha {
+  display: flex;
+}
+
+#captcha-value {
+  height: 40px;
+  padding: 10px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  color: #000;
+  font-weight: 700;
+  border-right: 2px solid gray;
+}
+
+
 button[class="btn apply-course"]{
   background-color: rgb(211, 0, 0);
   padding: 10px 10px;
