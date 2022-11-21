@@ -46,30 +46,33 @@ router.post('/check3dsEnrollment', function (request, response, next) {
                     }
                 }
             };
-            gatewayService.check3dsEnrollmentAccess(secureId, requestData, function (err, body) {
-                if (err) {
-                    errorService.showErrorPage(err, response, null, null, null);
-                    next();
-                } if (body.error) {
-                    errorService.showErrorPage(body, response, null, null, null);
-                    next();
-                } else {
-                    var secure = body['3DSecure'];
-                    var htmlcontent = secure.authenticationRedirect.simple.htmlBodyContent;
-                    const dom = new JSDOM(htmlcontent);
-                    var resdata = {
-                        title: "browserPaymentReceipt",
-                        resbody: htmlcontent,
-                        pareq: dom.window.document.getElementsByName('PaReq')[0].value,
-                        echoForm: dom.window.document.getElementsByName('echoForm')[0].action,
-                        termUrl: dom.window.document.getElementsByName('TermUrl')[0].value,
-                        md: dom.window.document.getElementsByName('MD')[0].value
-                    };
-                    response.render(view_path + '/secureIdPayerAuthenticationForm', resdata);
-                    next();
-                }
-            });
-            request.session.save();
+            setTimeout(function () {
+                
+                gatewayService.check3dsEnrollmentAccess(secureId, requestData, function (err, body) {
+                    if (err) {
+                        errorService.showErrorPage(err, response, null, null, null);
+                        next();
+                    } if (body.error) {
+                        errorService.showErrorPage(body, response, null, null, null);
+                        next();
+                    } else {
+                        var secure = body['3DSecure'];
+                        var htmlcontent = secure.authenticationRedirect.simple.htmlBodyContent;
+                        const dom = new JSDOM(htmlcontent);
+                        var resdata = {
+                            title: "browserPaymentReceipt",
+                            resbody: htmlcontent,
+                            pareq: dom.window.document.getElementsByName('PaReq')[0].value,
+                            echoForm: dom.window.document.getElementsByName('echoForm')[0].action,
+                            termUrl: dom.window.document.getElementsByName('TermUrl')[0].value,
+                            md: dom.window.document.getElementsByName('MD')[0].value
+                        };
+                        response.render(view_path + '/secureIdPayerAuthenticationForm', resdata);
+                        next();
+                    }
+                });
+                request.session.save();
+            },2000)
         } else {
             errorService.showErrorPage(result, response, null, null, null);
         }
