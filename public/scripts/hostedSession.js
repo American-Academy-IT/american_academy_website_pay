@@ -128,8 +128,7 @@ PaymentSession.configure({
             orderDescription: $("#order-description").val(),
             secureIdResponseUrl: NodeSample.secureIdResponseUrl(),
           };
-          setTimeout(function () {
-            var xhr = new XMLHttpRequest();
+          var xhr = new XMLHttpRequest();
           xhr.open("POST", NodeSample.endpoint(), true);
           xhr.setRequestHeader("Content-Type", "application/json");
           xhr.onreadystatechange = function () {
@@ -139,8 +138,6 @@ PaymentSession.configure({
           };
           xhr.send(JSON.stringify(data));
           console.log("Data: " + JSON.stringify(data));
-          },2000)
-          
         } else if ("fields_in_error" == response.status) {
           console.log("Session update failed with field errors.");
           if (
