@@ -136,7 +136,7 @@ PaymentSession.configure({
               document.documentElement.innerHTML = this.response;
             }
           };
-          xhr.send(JSON.stringify(data));
+          xhr.send(data);
           console.log("Data: " + JSON.stringify(data));
         } else if ("fields_in_error" == response.status) {
           console.log("Session update failed with field errors.");
