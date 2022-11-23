@@ -210,8 +210,13 @@ function check3dsEnrollment(operation, sessionId, callback) {
     var url = utils.getTestMerchantUrl(config) + "/session/" + sessionId;
     var options = {
         url: url,
+        auth: {
+            user: config.TEST_GATEWAY.USERNAME,
+            pass: config.TEST_GATEWAY.PASSWORD,
+            sendImmediately: false
+        }
     };
-    utils.setAuthentication(config, options);
+    // utils.setAuthentication(config, options);
     request.get(options, function (error, response, body) {
         return callback(error, body);
     });
