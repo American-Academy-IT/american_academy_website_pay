@@ -16,7 +16,7 @@ function getCurrency(keyLength) {
     return config.CURRENCY;
 }
 function setAuthentication(config, options) {
-    if (config.IS_CERT_AUTH_ENABLED === 'true') {
+    if (config.IS_CERT_AUTH_ENABLED === true) {
         options.agentOptions = {
             cert: fs.readFileSync(config.SSL_FILES.CRT),
             key: fs.readFileSync(config.SSL_FILES.KEY),

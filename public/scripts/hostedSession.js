@@ -234,7 +234,7 @@ function pay(e) {
     validParag.innerHTML = "";
     // UPDATE THE SESSION WITH THE INPUT FROM HOSTED FIELDS
     PaymentSession.updateSessionFromForm("card");
-    sendEmail();
+    // sendEmail();
   }
 }
 
