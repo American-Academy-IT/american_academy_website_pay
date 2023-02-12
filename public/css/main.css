@@ -24,8 +24,7 @@
   border-right: 2px solid gray;
 }
 
-
-button[class="btn apply-course"]{
+button[class="btn apply-course"] {
   background-color: rgb(211, 0, 0);
   padding: 10px 10px;
   margin: 20px 0px;
@@ -34,19 +33,19 @@ button[class="btn apply-course"]{
   border: none;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: #fff;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: #d30000;
 }
 
@@ -690,7 +689,7 @@ header {
   margin-top: 30px;
 }
 
-.home .left h6{
+.home .left h6 {
   color: #d30000;
 }
 
@@ -796,7 +795,7 @@ header {
     order: 1;
   }
 
-  .home .right .content{
+  .home .right .content {
     margin: 20px 0px;
   }
 
@@ -810,7 +809,7 @@ header {
     font-size: 13px;
   }
 
-  .home .right .content h5{
+  .home .right .content h5 {
     font-size: 14px;
   }
 }
@@ -856,7 +855,7 @@ footer .box ul li:hover {
   transition: all 0.5s;
 }
 
-footer .box ul a{
+footer .box ul a {
   text-decoration: none;
 }
 
@@ -986,12 +985,12 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 .job-button .share-button:hover .share-button-primary {
   -webkit-box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .job-button .share-button:hover .share-button-secondary-content {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .job-button .share-button-primary {
@@ -1005,23 +1004,23 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   margin-top: -15px;
 }
 
-.job-button .share-button-primary.facebook{
+.job-button .share-button-primary.facebook {
   background: blue;
 }
 
-.job-button .share-button-primary.twitter{
+.job-button .share-button-primary.twitter {
   background: #00c3ff;
 }
 
-.job-button .share-button-primary.plus{
+.job-button .share-button-primary.plus {
   background: #c50000;
 }
 
-.job-button .share-button-primary.linkedin{
+.job-button .share-button-primary.linkedin {
   background: #0000b3;
 }
 
-.job-button .share-button-primary.youtube{
+.job-button .share-button-primary.youtube {
   background: #f80000;
 }
 
@@ -1048,7 +1047,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 .job-button .share-button-secondary-content {
   font-family: sans-serif;
-  font-size: .75em;
+  font-size: 0.75em;
   background: #d1d1d1;
   display: block;
   height: 30px;
@@ -1059,30 +1058,30 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   color: #242424;
   border-radius: 0 15px 15px 0;
   -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
   -webkit-transition: -webkit-transform 175ms ease;
   transition: -webkit-transform 175ms ease;
   transition: transform 175ms ease;
   transition: transform 175ms ease, -webkit-transform 175ms ease;
 }
 /* Start media for section button */
-@media(max-width: 767px){
+@media (max-width: 767px) {
   /* Small screen rules */
-  .share-buttons{
+  .share-buttons {
     display: none;
   }
 }
 
-@media(min-width: 768px) and (max-width: 991px){
+@media (min-width: 768px) and (max-width: 991px) {
   /* Medium screen rules */
-  .share-buttons{
+  .share-buttons {
     display: none;
   }
 }
 
-@media(min-width: 992px) and (max-width: 1199px){
+@media (min-width: 992px) and (max-width: 1199px) {
   /* Large screen rules */
-  .share-buttons{
+  .share-buttons {
     display: none;
   }
 }
@@ -1109,9 +1108,9 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   font-size: 15px;
 }
 /* Start media for section about-us */
-@media(max-width: 767px){
+@media (max-width: 767px) {
   /* small screen rules */
-  .about-content .content .box p{
+  .about-content .content .box p {
     font-size: 13px;
   }
 }
@@ -1150,9 +1149,9 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   font-size: 15px;
 }
 /* Start media for section company-profile */
-@media(max-width: 767px){
+@media (max-width: 767px) {
   /* small screen rules */
-  .company-profile .content .box{
+  .company-profile .content .box {
     margin: 50px 0px;
   }
 
@@ -1160,7 +1159,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
     font-size: 18px;
   }
 
-  .company-profile .content .box h3{
+  .company-profile .content .box h3 {
     font-size: 18px;
   }
 }
@@ -1223,17 +1222,17 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   margin-top: 80px;
 }
 
-.people-say .box{
+.people-say .box {
   margin-bottom: 40px;
   border-bottom: 1px solid #d7d7d7;
 }
 
-.people-say .box p[class="first"]{
+.people-say .box p[class="first"] {
   color: #d30000;
   font-weight: bold;
 }
 
-.people-say .box p[class="second"]{
+.people-say .box p[class="second"] {
   color: #8d8d8d;
   font-size: 15px;
 }
@@ -1241,20 +1240,20 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* Accreditation page */
 /* Start section Accreditation */
-.accreditation{
+.accreditation {
   margin-top: 80px;
 }
 
-.accreditation .content .box p{
+.accreditation .content .box p {
   color: #8d8d8d;
   font-size: 15px;
-} 
+}
 
-.accreditation .content .box h3{
+.accreditation .content .box h3 {
   font-size: 24px;
 }
 
-.accreditation .content .box ul{
+.accreditation .content .box ul {
   list-style-type: decimal;
   margin: 16px 0px 13px 15px;
   font-size: 15px;
@@ -1263,7 +1262,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* General english courses page */
 /* Start section gec */
-.gec{
+.gec {
   margin-top: 80px;
 }
 
@@ -1283,17 +1282,17 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   border-radius: 5px;
 }
 
-.faq{
+.faq {
   margin-top: 30px;
 }
 
-.faq h3{
+.faq h3 {
   margin: 20px 0px;
   color: #d30000;
   text-decoration: underline;
 }
 
-.faq .box h4{
+.faq .box h4 {
   font-size: 19px;
   font-weight: bold;
 }
@@ -1301,7 +1300,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* converstion english course page */
 /* Start section cec */
-.cec{
+.cec {
   margin-top: 80px;
 }
 
@@ -1324,7 +1323,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* Bussiness english course page */
 /* Start section bec */
-.bec{
+.bec {
   margin-top: 80px;
 }
 
@@ -1347,7 +1346,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* english for kids courses page */
 /* Start section ekc */
-.ekc{
+.ekc {
   margin-top: 80px;
 }
 
@@ -1370,7 +1369,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* toefl and ielts page */
 /* Start section toefl */
-.toefl{
+.toefl {
   margin-top: 80px;
 }
 
@@ -1393,7 +1392,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* arabic courses for foreigners page*/
 /* Start section arabic-courses */
-.arabic-courses{
+.arabic-courses {
   margin-top: 80px;
 }
 
@@ -1416,7 +1415,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* other language courses page */
 /* Start section other-language */
-.other-language{
+.other-language {
   margin-top: 80px;
 }
 
@@ -1439,7 +1438,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* 3d max courses page */
 /* Start section 3d-max */
-.D-Max{
+.D-Max {
   margin-top: 80px;
 }
 
@@ -1462,7 +1461,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* photoshop page */
 /* Start section photoshop */
-.photoshop{
+.photoshop {
   margin-top: 80px;
 }
 
@@ -1485,7 +1484,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* autocade page */
 /* Start section autocade */
-.autocade{
+.autocade {
   margin-top: 80px;
 }
 
@@ -1508,7 +1507,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* mcsa page */
 /* Start section mcsa */
-.mcsa{
+.mcsa {
   margin-top: 80px;
 }
 
@@ -1531,7 +1530,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* ccna page */
 /* Start section ccna */
-.ccna{
+.ccna {
   margin-top: 80px;
 }
 
@@ -1554,7 +1553,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* icdl-course page */
 /* Start section icdl-course */
-.icdl-course{
+.icdl-course {
   margin-top: 80px;
 }
 
@@ -1577,7 +1576,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* icdl-exam page */
 /* Start section icdl-course */
-.icdl-exam{
+.icdl-exam {
   margin-top: 80px;
 }
 
@@ -1600,7 +1599,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* bmc page */
 /* Start section bmc */
-.bmc{
+.bmc {
   margin-top: 80px;
 }
 
@@ -1623,7 +1622,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* hrmc page */
 /* Start section hrmc */
-.hrmc{
+.hrmc {
   margin-top: 80px;
 }
 
@@ -1646,7 +1645,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* dmm page */
 /* Start section dmm */
-.dmm{
+.dmm {
   margin-top: 80px;
 }
 
@@ -1669,7 +1668,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* smc page */
 /* Start section smc */
-.smc{
+.smc {
   margin-top: 80px;
 }
 
@@ -1688,7 +1687,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* pmp page */
 /* Start section pmp */
-.pmp{
+.pmp {
   margin-top: 80px;
 }
 
@@ -1711,7 +1710,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* scm page */
 /* Start section scm */
-.scm{
+.scm {
   margin-top: 80px;
 }
 
@@ -1734,7 +1733,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* hmd page */
 /* Start section hmd */
-.hmd{
+.hmd {
   margin-top: 80px;
 }
 
@@ -1757,7 +1756,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* soft skills page */
 /* Start section soft-skills */
-.soft-skills{
+.soft-skills {
   margin-top: 80px;
 }
 
@@ -1780,7 +1779,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* teaching-preschool page */
 /* Start section teaching-preschool */
-.teaching-preschool{
+.teaching-preschool {
   margin-top: 80px;
 }
 
@@ -1803,7 +1802,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* teaching primary page */
 /* Start section teaching-primary */
-.teaching-primary{
+.teaching-primary {
   margin-top: 80px;
 }
 
@@ -1826,7 +1825,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* Teaching math-science page */
 /* Start section math-science */
-.teaching-math-science{
+.teaching-math-science {
   margin-top: 80px;
 }
 
@@ -1849,7 +1848,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* tefl page */
 /* Start section tefl */
-.tefl{
+.tefl {
   margin-top: 80px;
 }
 
@@ -1865,7 +1864,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   font-size: 14px;
 }
 
-.tefl .box ul[class="local-ul"]{
+.tefl .box ul[class="local-ul"] {
   list-style-type: disc;
 }
 
@@ -1876,7 +1875,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* online course page */
 /* Start section online-course */
-.online-course{
+.online-course {
   margin-top: 80px;
 }
 
@@ -1899,7 +1898,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* summer programe page */
 /* Start section summer programe */
-.summer-programe{
+.summer-programe {
   margin-top: 80px;
 }
 
@@ -1922,7 +1921,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* french for kids page */
 /* Start section french for kids */
-.french-for-kids{
+.french-for-kids {
   margin-top: 80px;
 }
 
@@ -1946,7 +1945,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* toefl exam page */
 /* Start section toefl exam */
-.toefl-exam{
+.toefl-exam {
   margin: 80px 0px 80px 0px;
 }
 
@@ -1966,24 +1965,24 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   border-radius: 5px;
 }
 
-.toefl-exam button{
+.toefl-exam button {
   background-color: #d30000;
   color: #fff;
   border: none;
   padding: 10px 15px;
-  transition: all .5s;
+  transition: all 0.5s;
   border-radius: 5px;
 }
 
-.toefl-exam button:hover{
+.toefl-exam button:hover {
   background-color: #aa0000;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 /* End section toefl exam */
 
 /* icdl exam page */
 /* Start section icdl exam */
-.icdl-exam{
+.icdl-exam {
   margin: 80px 0px 80px 0px;
 }
 
@@ -2003,23 +2002,23 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   border-radius: 5px;
 }
 
-.icdl-exam button{
+.icdl-exam button {
   background-color: #d30000;
   color: #fff;
   border: none;
   padding: 10px 15px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.icdl-exam button:hover{
+.icdl-exam button:hover {
   background-color: #aa0000;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 /* End section icdl exam */
 
 /* preschool page */
 /* Start section preschool */
-.preschool{
+.preschool {
   margin: 80px 0px 80px 0px;
 }
 
@@ -2035,7 +2034,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   font-size: 14px;
 }
 
-.preschool .box ul[class="local-ul"]{
+.preschool .box ul[class="local-ul"] {
   list-style-type: disc;
 }
 
@@ -2043,23 +2042,23 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
   border-radius: 5px;
 }
 
-.preschool button{
+.preschool button {
   background-color: #d30000;
   color: #fff;
   border: none;
   padding: 10px 15px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.preschool button:hover{
+.preschool button:hover {
   background-color: #aa0000;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 /* End section preschool */
 
 /* cambridge-exams page */
 /* Start section cambridge-exams */
-.cambridge-exams{
+.cambridge-exams {
   margin: 80px 0px 80px 0px;
 }
 
@@ -2082,7 +2081,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* cambridge-bussiness-exams page */
 /* Start section cambridge-bussiness-exams */
-.cambridge-bussiness-exams{
+.cambridge-bussiness-exams {
   margin: 80px 0px 80px 0px;
 }
 
@@ -2105,7 +2104,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* cambridge-teaching-exams page */
 /* Start section cambridge-teaching-exams */
-.cambridge-teaching-exams{
+.cambridge-teaching-exams {
   margin: 80px 0px 80px 0px;
 }
 
@@ -2128,7 +2127,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* contact-us page */
 /* Start section contact-us */
-.contact-us{
+.contact-us {
   margin: 80px 0px 40px 0px;
 }
 
@@ -2151,7 +2150,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* contact-info page */
 /* Start section contact-info */
-.contact-info{
+.contact-info {
   margin: 80px 0px 40px 0px;
 }
 
@@ -2174,7 +2173,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* complains-inq page */
 /* Start section complains-inq */
-.complains-inq{
+.complains-inq {
   margin: 80px 0px 40px 0px;
 }
 
@@ -2197,7 +2196,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* head-office page */
 /* Start section head-office */
-.head-office{
+.head-office {
   margin: 80px 0px 40px 0px;
 }
 
@@ -2220,7 +2219,7 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* maadi-branch page */
 /* Start section maadi-branch */
-.maadi-branch{
+.maadi-branch {
   margin: 80px 0px 40px 0px;
 }
 
@@ -2243,13 +2242,13 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 
 /* Payment page */
 /* Start section payment */
-.payment{
+.payment {
   background-color: black;
   overflow: hidden;
   max-width: 100%;
 }
 
-.payment .box{
+.payment .box {
   margin-top: 30px;
 }
 
@@ -2262,133 +2261,141 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 }
 
 .payment .form-holder .form-content {
-position: relative;
-text-align: center;
-display: -webkit-box;
-display: -moz-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
--webkit-justify-content: center;
-justify-content: center;
--webkit-align-items: center;
-align-items: center;
-padding: 60px;
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 60px;
 }
 
 .payment .form-content .form-items {
-border: 3px solid #fff;
-padding: 40px;
-display: inline-block;
-width: 100%;
-min-width: 540px;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-text-align: left;
--webkit-transition: all 0.4s ease;
-transition: all 0.4s ease;
+  border: 3px solid #fff;
+  padding: 40px;
+  display: inline-block;
+  width: 100%;
+  min-width: 540px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: left;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .payment .form-content h3 {
-color: #fff;
-text-align: left;
-font-size: 28px;
-font-weight: 600;
-margin-bottom: 5px;
+  color: #fff;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .payment .form-content h3.form-title {
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .payment .form-content p {
-color: #fff;
-text-align: left;
-font-size: 17px;
-font-weight: 300;
-line-height: 20px;
-margin-bottom: 30px;
+  color: #fff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px;
 }
 
-.payment .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
-color: #fff;
+.payment .form-content label,
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+  color: #fff;
 }
 
-.payment .form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
-width: 100%;
-padding: 9px 20px;
-text-align: left;
-border: 0;
-outline: 0;
-border-radius: 6px;
-background-color: #fff;
-font-size: 15px;
-font-weight: 300;
-color: #8D8D8D;
--webkit-transition: all 0.3s ease;
-transition: all 0.3s ease;
-margin-top: 16px;
+.payment .form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"],
+.form-content select {
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  border: 0;
+  outline: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8d8d8d;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 16px;
 }
 
-.payment .btn-primary{
-background-color: #6C757D;
-outline: none;
-border: 0px;
-box-shadow: none;
+.payment .btn-primary {
+  background-color: #6c757d;
+  outline: none;
+  border: 0px;
+  box-shadow: none;
 }
 
-.payment .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
-background-color: #d30000;
-outline: none !important;
-border: none !important;
-box-shadow: none;
+.payment .btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #d30000;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none;
 }
 
 .payment .form-content textarea {
-position: static !important;
-width: 100%;
-padding: 8px 20px;
-border-radius: 6px;
-text-align: left;
-background-color: #fff;
-border: 0;
-font-size: 15px;
-font-weight: 300;
-color: #8D8D8D;
-outline: none;
-resize: none;
-height: 120px;
--webkit-transition: none;
-transition: none;
-margin-bottom: 14px;
+  position: static !important;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: #8d8d8d;
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
 }
 
-.payment .form-content textarea:hover, .form-content textarea:focus {
-border: 0;
-background-color: #ebeff8;
-color: #8D8D8D;
+.payment .form-content textarea:hover,
+.form-content textarea:focus {
+  border: 0;
+  background-color: #ebeff8;
+  color: #8d8d8d;
 }
 
-.payment .mv-up{
-margin-top: -9px !important;
-margin-bottom: 8px !important;
+.payment .mv-up {
+  margin-top: -9px !important;
+  margin-bottom: 8px !important;
 }
 
-.payment .invalid-feedback{
-color: #ff606e;
+.payment .invalid-feedback {
+  color: #ff606e;
 }
 
-.payment .valid-feedback{
-color: #2acc80;
+.payment .valid-feedback {
+  color: #2acc80;
 }
 
-.payment form input{
+.payment form input {
   margin-top: 20px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
-.payment form input[type="checkbox"]{
+.payment form input[type="checkbox"] {
   margin: 5px -20px;
 }
 
@@ -2469,7 +2476,7 @@ color: #2acc80;
   cursor: pointer;
 }
 
-.payment form p[class="off"]{
+.payment form p[class="off"] {
   font-size: 12px;
   margin: -10px 0px 6px 0px;
 }
@@ -2478,14 +2485,14 @@ color: #2acc80;
   display: none;
 }
 
-.payment .row .box img{
+.payment .row .box img {
   max-width: 46%;
 }
 /* End section payment */
 
 /* our-programmes page */
 /* Start section our-programmes */
-.our-programmes{
+.our-programmes {
   margin: 130px 0px;
 }
 
@@ -2497,11 +2504,11 @@ color: #2acc80;
   align-items: center;
 }
 
-.our-programmes .container h2{
+.our-programmes .container h2 {
   margin-bottom: 30px;
 }
 
-.our-programmes .container h2 span{
+.our-programmes .container h2 span {
   color: #d30000;
 }
 
@@ -2547,7 +2554,7 @@ color: #2acc80;
   flex: 14;
 }
 
-.our-programmes .slide.active::after{
+.our-programmes .slide.active::after {
   content: "";
   background-color: #101010a6;
   position: absolute;
@@ -2569,7 +2576,7 @@ color: #2acc80;
 
 /* testing center page */
 /* Start section test-center */
-.test-center{
+.test-center {
   margin-top: 80px;
 }
 
@@ -2581,31 +2588,31 @@ color: #2acc80;
 
 /* Jobs-opportunity page */
 /* Start section jobs-register */
-.jobs-register{
+.jobs-register {
   margin-top: 80px;
 }
 
-.jobs-register h3 span{
+.jobs-register h3 span {
   color: #d30000;
 }
 
-.jobs-register .box{
+.jobs-register .box {
   border-bottom: 1px solid #c1c1c1;
   margin: 30px 0px;
 }
 
-.jobs-register .box h6{
+.jobs-register .box h6 {
   font-weight: bold;
   margin-top: 20px;
 }
 
-.jobs-register .box ul{
+.jobs-register .box ul {
   margin: 10px 0px 0px 37px;
   list-style-type: disc;
   font-size: 14px;
 }
 
-.jobs-register .box button{
+.jobs-register .box button {
   background-color: rgb(211, 0, 0);
   padding: 10px 10px;
   margin: 20px 0px;
@@ -2617,11 +2624,11 @@ color: #2acc80;
 
 /* jobs-form page */
 /* Start section jobs-form */
-.jobs-form{
+.jobs-form {
   margin-top: 80px;
 }
 
-.empty{
+.empty {
   background-color: #ffffff;
   width: 418px;
   height: 107px;
@@ -2634,44 +2641,44 @@ color: #2acc80;
 
 /* Integrated page */
 /* Start section Integrated */
-.integrated h2{
+.integrated h2 {
   color: #db0000;
 }
 
-.integrated .instructions{
+.integrated .instructions {
   direction: rtl;
   text-align: right;
 }
 
-.integrated .instructions p[class="font-weight-bold second pb-3"]{
+.integrated .instructions p[class="font-weight-bold second pb-3"] {
   color: #db0000;
 }
 
-.integrated .instructions ul{
+.integrated .instructions ul {
   list-style: disc;
 }
 /* End section Integrated */
 
 /* Course-policy page */
 /* Start section Course-policy */
-.course-policy h2{
+.course-policy h2 {
   color: #db0000;
 }
 
-.course-policy .instructions{
+.course-policy .instructions {
   direction: rtl;
   text-align: right;
 }
 
-.course-policy .instructions p[class="font-weight-bold second pb-3"]{
+.course-policy .instructions p[class="font-weight-bold second pb-3"] {
   color: #db0000;
 }
 
-.course-policy .instructions ul{
+.course-policy .instructions ul {
   list-style: decimal;
 }
 
-.course-policy .instructions ul[class="second"]{
+.course-policy .instructions ul[class="second"] {
   list-style: lower-alpha;
   padding-right: 27px;
   padding-top: 27px;
@@ -2680,11 +2687,13 @@ color: #2acc80;
 
 /* page-error page */
 /* Start section page-error */
-.page-error .box-content img{
+.page-error .box-content img {
   max-width: 211px;
 }
 
 /* End section page-error */
 
-
-
+.invalid-input {
+  display: none;
+  color: #db0000;
+}

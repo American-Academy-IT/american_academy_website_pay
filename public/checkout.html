@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!--Page title-->
-    <title>Online Payment</title>
+    <title>American Academy</title>
     <!--Meta types-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,8 +11,18 @@
       name="description"
       content="The American Academy for Training Courses (AATC) is a training provider with internationally accredited qualifications & training ..."
     />
-    <meta name="author" content="" />
-    <meta name="keywords" content="" />
+    <meta name="author" content="american academy" />
+    <meta
+      name="keywords"
+      content="Assessments, bussiness managment, teachers' exams, tefl, english courses"
+    />
+    <meta property="og:title" content="American Academy Egypt Branch" />
+    <meta
+      property="og:description"
+      content="The American Academy for Training Courses (AATC) is a training provider with internationally accredited qualifications & training"
+    />
+    <meta property="og:image" content="Assets/Images/Logo-favicon.png" />
+    <meta property="og:url" content="https://www.americanacademyeg.com/" />
     <!--Favicon-->
     <link
       rel="icon"
@@ -35,12 +45,6 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       rel="stylesheet"
-    />
-    <!--wow animation css-->
-    <link rel="stylesheet" href="Assets/wow.js/animate.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <!--My css file-->
     <link rel="stylesheet" href="css/main.css" />
@@ -382,22 +386,6 @@
                   </div>
                 </li>
                 <li class="nav-link" style="--i: 0.85s">
-                  <a href="#"
-                    >Cambridge University Exams<i class="fas fa-caret-down"></i
-                  ></a>
-                  <div class="dropdown">
-                    <ul>
-                      <li class="dropdown-link">
-                        <a
-                          href="cambridge-english-exams/cambridge-teaching-exams.html"
-                          >Cambridge teaching exams</a
-                        >
-                      </li>
-                      <div class="arrow"></div>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-link" style="--i: 0.85s">
                   <a href="contact-us.html"
                     >Contact Us<i class="fas fa-caret-down"></i
                   ></a>
@@ -430,7 +418,7 @@
                   </div>
                 </li>
                 <li class="nav-link" style="--i: 1.35s">
-                  <a href="/secureId">Online Payment</a>
+                  <a href="checkout.html">Online Payment</a>
                 </li>
                 <li class="nav-link" style="--i: 1.35s">
                   <a href="jobs-opportunity.html">Job Opportunity</a>
@@ -454,311 +442,165 @@
     <!--End section navbar-top-->
 
     <!--Start section payment-->
-    <!-- <section>
-      <div
-        class="bg-dark min-vh-100 d-flex justify-content-center align-items-center"
-      >
-        <p class="text-light h4">
-            Sorry, The team is making some modifications to this page now
-        </p>
-      </div>
-    </section> -->
     <section class="bg-black text-light py-5">
       <div class="container-fluid">
         <div class="row min-vh-100">
           <div class="container-fluid py-5">
             <div class="row justify-content-center align-items-center">
               <div class="form-items col-md-7">
-                <h1>Online Payment</h1>
-                <p>Fill in the data below.</p>
-                <form onsubmit="pay(event)">
+                <h1>Online <span class="span">Payment</span></h1>
+                <form name="checkout">
+                  <fieldset>
+                    <legend class="text-light">Personal Details</legend>
+                    <div class="form-group">
+                      <label class="col-sm-10 control-label" for="full-name"
+                        >Full Name:</label
+                      >
+                      <div class="col-sm-10">
+                        <input
+                          autofocus
+                          id="full-name"
+                          name="full-name"
+                          type="text"
+                          required
+                          placeholder="Enter your full name"
+                          class="form-control input-md"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-10 control-label" for="national-id"
+                        >National ID:</label
+                      >
+                      <div class="col-sm-10">
+                        <input
+                          id="national-id"
+                          name="nationalID"
+                          type="text"
+                          required
+                          placeholder="Enter your national ID"
+                          class="form-control input-md"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-10 control-label" for="phone"
+                        >Phone Number:</label
+                      >
+                      <div class="col-sm-10">
+                        <input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          required
+                          placeholder="Enter your phone number"
+                          class="form-control input-md"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br />
+                  <fieldset>
+                    <legend class="text-light">Payment Details</legend>
+                    <div class="form-group">
+                      <label class="col-sm-10 control-label" for="select-course"
+                        >Select Course:</label
+                      >
+                      <select
+                        id="select-course"
+                        name="selectCourse"
+                        placeholder="Please Choose one course"
+                        class="form-select p-2 mx-3 col-sm-8 bg-dark text-light"
+                        aria-label="Default select example"
+                        required
+                      >
+                        <option value="">--Please choose an option--</option>
+                        <option value="ACT Authentication">
+                          ACT Authentication
+                        </option>
+                        <option value="ICDL Course">ICDL Course</option>
+                        <option value="Online Course">Online Course</option>
+                        <option value="Soft Skills Course">
+                          Soft Skills Course
+                        </option>
+                        <option value="General English Course">
+                          General English Course
+                        </option>
+                        <option value="English Conversation  Course">
+                          English Conversation Course
+                        </option>
+                        <option
+                          value="Business 
+                                English Course"
+                        >
+                          Business English Course
+                        </option>
+                        <option value="English Course For Kids">
+                          English Course For Kids
+                        </option>
+                        <option value="Hospital Managment Diploma">
+                          Hospital Managment Diploma
+                        </option>
+                        <option value="Supply Chain Diploma">
+                          Supply Chain Diploma
+                        </option>
+                        <option value="PMP Diploma">PMP Diploma</option>
+                        <option value="TOEFl & IELTS Exam Preparation Course">
+                          TOEFl & IELTS Exam Preparation Course
+                        </option>
+                        <option value="TEFL">TEFL</option>
+                        <option value="Math & Science Diploma">
+                          Math & Science Diploma
+                        </option>
+                        <option value="Teaching English For Primary">
+                          Teaching English For Primary
+                        </option>
+                        <option value="Arabic Courses for Foreigner">
+                          Arabic Courses for Foreigner
+                        </option>
+                        <option value="Other Languages Courses">
+                          Other Languages Courses
+                        </option>
+                        <option value="Marketing Diploma">
+                          Marketing Diploma
+                        </option>
+                        <option value="Human Resources Management Diploma">
+                          Human Resources Management Diploma
+                        </option>
+                        <option value="Business Management Diploma">
+                          Business Management Diploma
+                        </option>
+                        <option value="Photoshop Course">
+                          Photoshop Course
+                        </option>
+                        <option value="3D Max Course">3D Max Course</option>
+                        <option value="Autocad Course">Autocad Course</option>
+                        <option value="MCSA">MCSA</option>
+                        <option value="CCNA">CCNA</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-10 control-label" for="amount"
+                        >Amount:</label
+                      >
+                      <div class="col-sm-10">
+                        <input
+                          autofocus
+                          id="amount"
+                          name="amount"
+                          type="number"
+                          required
+                          value="100"
+                          min="100"
+                          step="5"
+                          class="form-control input-md"
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br />
                   <div>
-                    <h4 class="text-light">personal details</h4>
-                    <fieldset>
-                      <div class="form-group">
-                        <label class="col-sm-10 control-label" for="full-name"
-                          >Full Name:</label
-                        >
-                        <div class="col-sm-10">
-                          <input
-                            name="fullName"
-                            type="text"
-                            id="full-name"
-                            class="form-control input-md"
-                            autofocus
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-10 control-label" for="national-id"
-                          >National ID:</label
-                        >
-                        <div class="col-sm-10">
-                          <input
-                            name="nationalID"
-                            type="text"
-                            id="national-id"
-                            class="form-control input-md"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-sm-10 control-label"
-                          for="phone-number"
-                          >Phone Number:</label
-                        >
-                        <div class="col-sm-10">
-                          <input
-                            name="phoneNumber"
-                            type="text"
-                            id="phone-number"
-                            class="form-control input-md"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-sm-10 control-label"
-                          for="select-course"
-                          >Select Course:</label
-                        >
-                        <select
-                          name="selectCourse"
-                          id="select-course"
-                          class="form-select p-2 mx-3 col-sm-10 bg-dark text-light"
-                          aria-label="Default select example"
-                        >
-                          <option value="ACT Authentication">
-                            ACT Authentication
-                          </option>
-                          <option value="ICDL Course">ICDL Course</option>
-                          <option value="Online Course">Online Course</option>
-                          <option value="Soft Skills Course">
-                            Soft Skills Course
-                          </option>
-                          <option value="General English Course">
-                            General English Course
-                          </option>
-                          <option value="English Conversation  Course">
-                            English Conversation Course
-                          </option>
-                          <option
-                            value="Business 
-                              English Course"
-                          >
-                            Business English Course
-                          </option>
-                          <option value="English Course For Kids">
-                            English Course For Kids
-                          </option>
-                          <option value="Hospital Managment Diploma">
-                            Hospital Managment Diploma
-                          </option>
-                          <option value="Supply Chain Diploma">
-                            Supply Chain Diploma
-                          </option>
-                          <option value="PMP Diploma">PMP Diploma</option>
-                          <option value="TOEFl & IELTS Exam Preparation Course">
-                            TOEFl & IELTS Exam Preparation Course
-                          </option>
-                          <option value="TEFL">TEFL</option>
-                          <option value="Math & Science Diploma">
-                            Math & Science Diploma
-                          </option>
-                          <option value="Teaching English For Primary">
-                            Teaching English For Primary
-                          </option>
-                          <option value="Arabic Courses for Foreigner">
-                            Arabic Courses for Foreigner
-                          </option>
-                          <option value="Other Languages Courses">
-                            Other Languages Courses
-                          </option>
-                          <option value="Marketing Diploma">
-                            Marketing Diploma
-                          </option>
-                          <option value="Human Resources Management Diploma">
-                            Human Resources Management Diploma
-                          </option>
-                          <option value="Business Management Diploma">
-                            Business Management Diploma
-                          </option>
-                          <option value="Photoshop Course">
-                            Photoshop Course
-                          </option>
-                          <option value="3D Max Course">3D Max Course</option>
-                          <option value="Autocad Course">Autocad Course</option>
-                          <option value="MCSA">MCSA</option>
-                          <option value="CCNA">CCNA</option>
-                        </select>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div>
-                    <h4 class="text-light">Payment details</h4>
-                    <fieldset>
-                      <div class="form-group">
-                        <label class="col-md-10 control-label" for="card-number"
-                          >Card number:</label
-                        >
-                        <div class="col-md-10">
-                          <input
-                            type="text"
-                            id="card-number"
-                            class="form-control input-md"
-                            value=""
-                            readonly
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="expiry-month"
-                          >Expiry month:</label
-                        >
-                        <div class="col-md-10">
-                          <input
-                            type="text"
-                            id="expiry-month"
-                            class="form-control input-md"
-                            value=""
-                            readonly
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-md-10 control-label" for="expiry-year"
-                          >Expiry year:</label
-                        >
-                        <div class="col-md-10">
-                          <input
-                            type="text"
-                            id="expiry-year"
-                            class="form-control input-md"
-                            value=""
-                            readonly
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="security-code"
-                          >Security code:</label
-                        >
-                        <div class="col-md-10">
-                          <input
-                            type="text"
-                            id="security-code"
-                            class="form-control input-md"
-                            value=""
-                            readonly
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="order-id"
-                        ></label>
-                        <div class="col-md-10">
-                          <input
-                            hidden
-                            type="text"
-                            id="order-id"
-                            class="form-control input-md"
-                            value="<%= orderId %>"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="order-amount"
-                          >Order amount:</label
-                        >
-                        <div class="col-md-10">
-                          <input
-                            type="text"
-                            id="order-amount"
-                            class="form-control input-md"
-                            value="<%= orderAmount %>"
-                            maxlength="14"
-                          />
-                        </div>
-                        <p class="p-3">With 3% Bank Charge in EGP Currency</p>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="order-currency"
-                        ></label>
-                        <div class="col-md-10">
-                          <input
-                            hidden
-                            type="text"
-                            id="order-currency"
-                            class="form-control input-md"
-                            value="<%= orderCurrency %>"
-                            maxlength="3"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="order-description"
-                          >Description:</label
-                        >
-                        <div class="col-md-10">
-                          <input
-                            type="text"
-                            id="order-description"
-                            class="form-control input-md"
-                            value="<%= orderDescription %>"
-                            maxlength="127"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="transaction-id"
-                        ></label>
-                        <div class="col-md-10">
-                          <input
-                            hidden
-                            type="text"
-                            id="transaction-id"
-                            class="form-control input-md"
-                            value="<%= transactionId %>"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label
-                          class="col-md-10 control-label"
-                          for="input-captcha"
-                          >Enter Captcha:</label
-                        >
-                        <div class="col-md-10">
-                          <div class="captcha">
-                            <div id="captcha-value"></div>
-                            <input
-                              id="input-captcha"
-                              class="form-control input-md"
-                              type="text"
-                              placeholder="Rewrite the code again"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div>
-                    <h5>Personal Data processing consent form</h5>
+                    <h5>Personal Data Processing Consent Form</h5>
                     <div>
                       <p>
                         I hereby consent to the processing of my personal data
@@ -787,13 +629,11 @@
                   </div>
                   <div class="row justify-content-between">
                     <div class="col-md-6">
-                      <p id="valid-parag" class="py-4 h5 text-danger"></p>
-                      <button
-                        type="submit"
-                        class="btn btn-primary"
-                        id="payButton"
-                      >
-                        Pay Now
+                      <p id="invalid-input" class="invalid-input">
+                        ERROR: Make sure your entered valid data
+                      </p>
+                      <button type="submit" class="btn btn-primary">
+                        Checkout
                       </button>
                     </div>
                     <div class="col-md-6">
@@ -822,7 +662,6 @@
         </div>
       </div>
     </section>
-
     <!--End section payment-->
 
     <!--Start footer-->
@@ -965,40 +804,24 @@
     </section>
     <!--End section scroll to top-->
 
-    <!--Scroll Reveal-->
-    <script src="https://qnbalahli.gateway.mastercard.com/form/version/<%= apiVersion %>/merchant/<%= merchant %>/session.js"></script>
-    <script src="scripts/jquery.min.js"></script>
-    <script type="text/javascript">
-      var returnResponseUrl = "process/process3ds/";
-      var NodeSample = {
-        operation: function () {
-          return "CHECK_3DS_ENROLLMENT";
-        },
-        endpoint: function () {
-          return "/process/check3dsEnrollment/";
-        },
-        params: function () {
-          return encodeURI(
-            "?redirectUrl=" +
-              window.location.protocol +
-              "//" +
-              window.location.host +
-              "/" +
-              returnResponseUrl,
-          );
-        },
-        secureIdResponseUrl: function () {
-          return encodeURI(
-            window.location.protocol +
-              "//" +
-              window.location.host +
-              "/process/process3ds",
-          );
-        },
-      };
-    </script>
-    <script src="scripts/hostedSession.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/custom.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://qnbalahli.test.gateway.mastercard.com/static/checkout/checkout.min.js"
+      data-cancel="https://americanacademyeg.com/checkout.html"
+      data-error="errorCallback"
+      data-complete="completeCallback"
+    ></script>
+
+    <script src="./js/checkout.js"></script>
   </body>
 </html>

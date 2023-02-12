@@ -1,45 +1,22 @@
 {
-  "name": "gateway-nodejs-sample-code",
+  "name": "qnb-checkout",
   "version": "1.0.0",
-  "description": "",
-  "main": "NODE_DEBUG=true index.js",
-  "private": true,
+  "description": "QNB Bank Integration using Checkout Impl",
+  "main": "server",
   "scripts": {
-    "test": "jasmine",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "dump": "node --max-old-space-size=4076 scripts/config/index.js",
-    "qat": "",
-    "prod": ""
+    "watch": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Hossam Hamdy",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "body-parser": "^1.15.2",
-    "bootstrap": "*",
-    "client-certificate-auth": "^0.3.0",
-    "compression": "^1.6.2",
-    "cookie-session": "^2.0.0-beta.3",
+    "axios": "^1.3.2",
     "cors": "^2.8.5",
-    "ejs": "^1.0.0",
-    "express": "^4.14.0",
-    "express-session": "^1.15.6",
-    "http-status-codes": "^2.2.0",
-    "https-agent": "^1.0.0",
-    "jquery": "~3.2.1",
-    "jsdom": "*",
-    "lodash": "^4.17.4",
-    "mysql2": "^2.3.3",
-    "request": "^2.81.0",
-    "request-debug": "^0.2.0",
-    "restler": "^3.4.0",
-    "sequelize": "^6.21.3"
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1",
-    "jasmine": "^3.1.0",
-    "nodemon": "^2.0.18"
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
   }
 }
