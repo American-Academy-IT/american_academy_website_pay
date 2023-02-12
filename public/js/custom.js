@@ -17,24 +17,19 @@ span.onclick = function () {
   });
 };
 
-//Form Validation function
-(function () {
-  "use strict";
-  const forms = document.querySelectorAll(".requires-validation");
-  Array.from(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
+//popup button close function
+let btnClose = document.getElementById("close-all");
+let btnPayment = document.getElementById("btnPayment");
+let popupWindow = document.getElementById("popup-window");
+
+btnPayment.onclick = function () {
+  popupWindow.style.display = "none";
+}
+
+btnClose.onclick = function () {
+  popupWindow.style.display = "none";
+}
+
 
 //Scroll Reveal library Function
 ScrollReveal({
@@ -71,16 +66,4 @@ function removeActiveClass() {
   });
 }
 
-//Input dropdown function
-// const selected = document.querySelector(".selected");
-// const optionsContainer = document.querySelector(".options-container");
-// const optionsList = document.querySelectorAll(".option");
-// selected.addEventListener("click", () => {
-//   optionsContainer.classList.toggle("active");
-// });
-// optionsList.forEach(o => {
-//   o.addEventListener("click", () => {
-//     selected.innerHTML = o.querySelector("label").innerHTML;
-//     optionsContainer.classList.remove("active");
-//   });
-// });
+
