@@ -24,7 +24,7 @@ async function sendNotification(email) {
             Phone: ${email.phone}
             National ID: ${email.nationalId}
             Course: ${email.description}
-            Amount: ${email.amount} EGP`,
+            Amount: ${email.amount} ${email.currency}`,
   };
 
   // Send the email

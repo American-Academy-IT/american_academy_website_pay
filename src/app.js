@@ -17,17 +17,27 @@ app.use(loggerMiddleware);
 app.post(
   '/checkout',
   errHandler(async (req, res) => {
-    const { amount, description } = req.body;
-    if (!amount || !description) {
+    const { amount, currency, description } = req.body;
+    if (!amount || !currency || !description) {
       return res.status(400).send({ message: 'Missing required fields' });
     }
     if (+amount < 100) {
       return res.status(400).send({ message: 'Invalid amount' });
     }
+    if (!['EGP', 'USD'].includes(currency)) {
+      return res.status(400).send({ message: 'Invalid Currency' });
+    }
 
-    const sessionId = await openSession(amount, description);
+    const sessionId = await openSession(req.body);
     await sendNotification(req.body);
     return res.status(200).send({ sessionId });
+  })
+);
+
+app.get(
+  '/notification',
+  errHandler(async (req, res) => {
+    return res.sendFile(join(__dirname, '..', 'public', 'index.html'));
   })
 );
 

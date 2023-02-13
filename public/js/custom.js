@@ -18,9 +18,9 @@ span.onclick = function () {
 };
 
 //popup button close function
-let btnClose = document.getElementById("close-all");
-let btnPayment = document.getElementById("btnPayment");
 let popupWindow = document.getElementById("popup-window");
+let btnPayment = document.getElementById("btnPayment");
+let btnClose = document.getElementById("close-all");
 
 btnPayment.onclick = function () {
   popupWindow.style.display = "none";

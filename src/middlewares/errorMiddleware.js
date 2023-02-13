@@ -3,10 +3,13 @@ function errHandler(fn) {
 }
 
 function errMiddleware(err, _, res, __) {
-  console.log("Uncaught exception:", err);
+  console.log(
+    'Uncaught exception:',
+    err?.response?.data || err?.response || err?.message || err?.error || err
+  );
 
   res.status(500).send({
-    message: "Oops, an unexpected error occurred, please try again.",
+    message: 'Oops, an unexpected error occurred, please try again.',
   });
 }
 

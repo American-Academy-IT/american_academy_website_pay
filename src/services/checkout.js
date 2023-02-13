@@ -5,7 +5,7 @@ const API = process.env.API;
 const MERCHANT = process.env.MERCHANT;
 const PASSWORD = process.env.PASSWORD;
 
-async function openSession(amount, description) {
+async function openSession(order) {
   const config = {
     url: API + MERCHANT + '/session',
     headers: {
@@ -27,9 +27,10 @@ async function openSession(amount, description) {
       },
       order: {
         id: generateId(),
-        currency: 'EGP',
-        amount: amount,
-        description: description || 'Not Specified',
+        currency: order.currency,
+        amount: order.amount,
+        description: order?.description || 'Not Specified',
+        notificationUrl: 'https://americanacademyeg.com/notification',
       },
     },
   };
