@@ -4,6 +4,7 @@
   "description": "QNB Bank Integration using Checkout Impl",
   "main": "server",
   "scripts": {
+    "start": "set PORT=5000&& node src/server.js",
     "watch": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

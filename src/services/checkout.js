@@ -1,5 +1,5 @@
-const axios = require("axios");
-const generateId = require("./generateId");
+const axios = require('axios');
+const generateId = require('./generateId');
 
 const API = process.env.API;
 const MERCHANT = process.env.MERCHANT;
@@ -7,29 +7,29 @@ const PASSWORD = process.env.PASSWORD;
 
 async function openSession(amount, description) {
   const config = {
-    url: API + MERCHANT + "/session",
+    url: API + MERCHANT + '/session',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
-    method: "post",
+    method: 'post',
     auth: {
       username: `merchant.${MERCHANT}`,
       password: PASSWORD,
     },
     data: {
-      apiOperation: "INITIATE_CHECKOUT",
+      apiOperation: 'INITIATE_CHECKOUT',
       interaction: {
-        operation: "PURCHASE",
+        operation: 'PURCHASE',
         merchant: {
-          name: "American Academy",
+          name: 'American Academy',
           address: {},
         },
       },
       order: {
         id: generateId(),
-        currency: "EGP",
+        currency: 'EGP',
         amount: amount,
-        description: description || "Not Specified",
+        description: description || 'Not Specified',
       },
     },
   };
