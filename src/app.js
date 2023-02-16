@@ -36,7 +36,7 @@ app.post(
 app.post(
   '/webhook',
   errHandler(async (req, _, next) => {
-    console.log('Headers:', Object.keys(req.header).length ? req.header : undefined);
+    console.log('Headers: ', JSON.stringify(req.headers));
     // sendNotification(req.body);
     next();
   })
