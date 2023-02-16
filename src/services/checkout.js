@@ -30,7 +30,7 @@ async function openSession(order) {
         currency: order.currency,
         amount: order.amount,
         description: order?.description || 'Not Specified',
-        notificationUrl: 'https://americanacademyeg.com/notification',
+        notificationUrl: 'https://americanacademyeg.com/webhook',
       },
     },
   };

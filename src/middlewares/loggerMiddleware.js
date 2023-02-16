@@ -1,6 +1,6 @@
-const removePaddingSpaces = (obj) => {
+const removePaddingSpaces = obj => {
   for (const key in obj) {
-    if (typeof obj[key] !== "string") continue;
+    if (typeof obj[key] !== 'string') continue;
     obj[key] = obj[key].trim();
   }
 

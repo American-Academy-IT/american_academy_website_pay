@@ -60,7 +60,7 @@ async function checkout(orderData) {
 }
 
 function errorCallback(error) {
-  alert(JSON.stringify(error));
+  alert(JSON.stringify(error.message || err));
 }
 
 function completeCallback(result) {

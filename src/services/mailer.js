@@ -1,30 +1,37 @@
 const nodemailer = require('nodemailer');
 
+const config = {
+  HOST: process.env.EM_HOST,
+  PORT: process.env.EM_PORT,
+  USER: process.env.EM_USER,
+  PASS: process.env.EM_PASS,
+  FROM: process.env.EM_FROM,
+  TO: process.env.EM_TO,
+};
+
 const transporter = nodemailer.createTransport({
-  host: 'americanacademyeg.com',
-  port: 465,
+  host: config.HOST,
+  port: config.PORT,
   secure: true,
   auth: {
-    user: 'payment@americanacademyeg.com',
-    pass: 'Act@@ets@2022',
+    user: config.USER,
+    pass: config.PASS,
   },
 });
 
 async function sendNotification(email) {
   // Define the email options
   const mailOptions = {
-    from: 'payment@americanacademyeg.com',
-    to: [
-      'customer2@americanacademyeg.com',
-      'sales2@americanacademyeg.com',
-      'accountant4@americanacademyeg.com',
-    ],
+    from: config.FROM,
+    to: config.TO,
     subject: 'Payment Request from' + email.name,
-    text: `${email.name} has tried to make a payment request throw your payment page.
-            Phone: ${email.phone}
-            National ID: ${email.nationalId}
-            Course: ${email.description}
-            Amount: ${email.amount} ${email.currency}`,
+    text: `
+    ${email.name} has tried to make a payment request throw your payment page.
+    Order Id: ${email.id}
+    Phone: ${email.phone}
+    National ID: ${email.nationalId}
+    Course: ${email.description}
+    Amount: ${email.amount} ${email.currency}`,
   };
 
   // Send the email

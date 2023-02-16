@@ -29,15 +29,16 @@ app.post(
     }
 
     const sessionId = await openSession(req.body);
-    await sendNotification(req.body);
     return res.status(200).send({ sessionId });
   })
 );
 
-app.get(
-  '/notification',
-  errHandler(async (req, res) => {
-    return res.sendFile(join(__dirname, '..', 'public', 'index.html'));
+app.post(
+  '/webhook',
+  errHandler(async (req, _, next) => {
+    console.log('Headers:', Object.keys(req.header).length ? req.header : undefined);
+    // sendNotification(req.body);
+    next();
   })
 );
 
