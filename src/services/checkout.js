@@ -26,7 +26,7 @@ async function openSession(order) {
         },
       },
       order: {
-        id: generateId(),
+        id: order.id,
         currency: order.currency,
         amount: order.amount,
         description: order?.description || 'Not Specified',

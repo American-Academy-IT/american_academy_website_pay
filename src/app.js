@@ -6,6 +6,8 @@ const openSession = require('./services/checkout');
 const sendNotification = require('./services/mailer');
 const loggerMiddleware = require('./middlewares/loggerMiddleware');
 const { errMiddleware, errHandler } = require('./middlewares/errorMiddleware');
+const generateId = require('./services/generateId');
+const { addNewOrder } = require('./model/order');
 
 const app = express();
 
@@ -28,7 +30,13 @@ app.post(
       return res.status(400).send({ message: 'Invalid Currency' });
     }
 
-    const sessionId = await openSession(req.body);
+    const order = {
+      id: generateId(),
+      ...req.body,
+    };
+
+    await addNewOrder(order);
+    const sessionId = await openSession(order);
     return res.status(200).send({ sessionId });
   })
 );
