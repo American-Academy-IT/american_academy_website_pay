@@ -6,9 +6,10 @@ async function dbConnect() {
     user: process.env.DB_USERNAME,
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
+    waitForConnections: true,
   };
 
-  const pool = await mysql.createPool(config);
+  const pool = mysql.createPool(config);
   pool.on('connection', conn => {
     conn.query("SET time_zone='+00:00';", error => {
       if (error) {
@@ -24,6 +25,8 @@ async function query(sql, values) {
   const db = await dbConnect();
 
   const [rows, _] = await db.execute(sql, values);
+
+  db.end();
 
   return rows;
 }
