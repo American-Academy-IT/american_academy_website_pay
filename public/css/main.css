@@ -776,8 +776,11 @@ header {
   position: absolute;
   z-index: 1000;
   color: #fff;
-  top: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 /* Start media for home-cover */
 @media (max-width: 767px) {
   /* small screen rules */
@@ -2328,6 +2331,28 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 }
 /* End section head-office */
 
+/* Start section landing-page */
+.landing h1 span {
+  color: red;
+}
+
+.landing button{
+  color: #fff;
+  background-color: red;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  transition: all 0.5s;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.landing button:hover{
+  background-color: black;
+  transition: all 0.5s;
+}
+/* End section landing-page */
+
 /* maadi-branch page */
 /* Start section maadi-branch */
 .maadi-branch {
@@ -2734,21 +2759,21 @@ footer .social-links .box a i[class="fab fa-youtube"]:hover {
 /* End section jobs-register */
 
 /* jobs-form page */
-/* Start section jobs-form */
-.jobs-form {
+/* Start section hubspot-form */
+.hubspot-form {
   margin-top: 80px;
 }
 
 .empty {
   background-color: #ffffff;
-  width: 418px;
-  height: 107px;
+  width: 844px;
+  height: 124px;
   position: relative;
   z-index: 400;
-  left: 1px;
+  left: 133px;
   bottom: 59px;
 }
-/* End section jobs-form */
+/* End section hubspot-form */
 
 /* Integrated page */
 /* Start section Integrated */
