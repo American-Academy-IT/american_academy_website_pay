@@ -22,15 +22,6 @@ let popupWindow = document.getElementById("popup-window");
 let btnPayment = document.getElementById("btnPayment");
 let btnClose = document.getElementById("close-all");
 
-btnPayment.onclick = function () {
-  popupWindow.style.display = "none";
-}
-
-btnClose.onclick = function () {
-  popupWindow.style.display = "none";
-}
-
-
 //Scroll Reveal library Function
 ScrollReveal({
   reset: true,
