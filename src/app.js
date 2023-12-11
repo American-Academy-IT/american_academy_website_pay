@@ -19,6 +19,7 @@ app.use(loggerMiddleware);
 app.post(
   '/checkout',
   errHandler(async (req, res) => {
+    return res.status(503).send({ message: 'Temporary unavailable' });
     const { amount, currency, description } = req.body;
     if (!amount || !currency || !description) {
       return res.status(400).send({ message: 'Missing required fields' });
