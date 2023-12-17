@@ -1,5 +1,4 @@
 const axios = require('axios');
-const generateId = require('./generateId');
 
 const API = process.env.API;
 const MERCHANT = process.env.MERCHANT;
@@ -7,7 +6,7 @@ const PASSWORD = process.env.PASSWORD;
 
 async function openSession(order) {
   const config = {
-    url: API + MERCHANT + '/session',
+    url: `${API}/${MERCHANT}/session`,
     headers: {
       'Content-Type': 'application/json',
     },
@@ -39,4 +38,4 @@ async function openSession(order) {
   return res.data?.session?.id;
 }
 
-module.exports = openSession;
+module.exports = { openSession };

@@ -4,8 +4,8 @@
   "description": "QNB Bank Integration using Checkout Impl",
   "main": "server",
   "scripts": {
-    "start": "set PORT=5000&& node src/server.js",
-    "watch": "nodemon src/server.js",
+    "start": "set ENV=production&& node src/server.js",
+    "dev": "set ENV=development&& nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hossam Hamdy",
@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.0.2"
   }
 }

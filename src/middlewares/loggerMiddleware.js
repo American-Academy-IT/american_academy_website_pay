@@ -1,15 +1,4 @@
-const removePaddingSpaces = obj => {
-  for (const key in obj) {
-    if (typeof obj[key] !== 'string') continue;
-    obj[key] = obj[key].trim();
-  }
-
-  return obj;
-};
-
 function loggerMiddleware(req, _, next) {
-  removePaddingSpaces(req.body);
-
   console.log({
     method: req.method,
     path: req.path,
@@ -18,4 +7,4 @@ function loggerMiddleware(req, _, next) {
   next();
 }
 
-module.exports = loggerMiddleware;
+module.exports = { loggerMiddleware };

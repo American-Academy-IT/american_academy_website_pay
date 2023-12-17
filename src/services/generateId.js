@@ -4,4 +4,4 @@ function generateId() {
   return crypto.randomBytes(16).toString('hex');
 }
 
-module.exports = generateId;
+module.exports = { generateId };
