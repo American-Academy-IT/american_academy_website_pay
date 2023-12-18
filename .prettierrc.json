@@ -8,5 +8,8 @@
   "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "printWidth": 100
+  "printWidth": 100,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }

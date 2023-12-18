@@ -341,9 +341,9 @@
                     </ul>
                   </div>
                 </li>
-                <!-- <li class="nav-link" style="--i: 1.35s">
+                <li class="nav-link" style="--i: 1.35s">
                   <a href="checkout.html">Online Payment</a>
-                </li> -->
+                </li>
                 <li class="nav-link" style="--i: 1.35s">
                   <a href="jobs-opportunity.html">Job Opportunity</a>
                 </li>
@@ -370,7 +370,10 @@
           <div class="container-fluid py-5">
             <div class="row justify-content-center align-items-center">
               <div class="form-items col-md-7">
-                <h1>Online <span class="span">Payment</span></h1>
+                <h1>
+                  Pay with <span class="span">Visa</span>, <span class="span">MasterCard</span> and
+                  <span class="span">Meeza</span>
+                </h1>
                 <form name="checkout">
                   <fieldset>
                     <legend class="text-light">Personal Details</legend>
@@ -533,11 +536,24 @@
                     </div>
                     <div class="form-group d-flex">
                       <div>
+                        <input type="checkbox" id="terms-checkbox" required />
+                      </div>
+                      <label class="col-sm-10 control-label" for="terms-checkbox"
+                        >I have read and agreed on the
+                        <a href="./terms-and-conditions.html" target="_blank"
+                          >Terms and Conditions</a
+                        >.
+                      </label>
+                    </div>
+                    <div class="form-group d-flex">
+                      <div>
                         <input type="checkbox" id="checkbox" required />
                       </div>
                       <label class="col-sm-10 control-label" for="checkbox"
-                        >I acknowledge that I have read and fully understand the terms and
-                        conditions of Personal Data processing consent form and that i agree on it.
+                        >I acknowledge that I have read and fully understand
+                        <a href="./privacy-policy.html" target="_blank">Privacy Policy</a> and
+                        <a href="./refund-policy.html" target="_blank">Refund Policy</a>
+                        I agree on them.
                       </label>
                     </div>
                   </div>
