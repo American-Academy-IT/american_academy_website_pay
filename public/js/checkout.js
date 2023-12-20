@@ -6,6 +6,7 @@ const inputAmount = document.getElementById('amount');
 const inputCurrency = document.getElementById('select-currency');
 const checkBox = document.getElementById('checkbox');
 const inputInvalid = document.getElementById('invalid-input');
+const termsCheckbox = document.getElementById('terms-checkbox');
 
 document.forms[0].onsubmit = e => {
   e.preventDefault();
@@ -35,6 +36,7 @@ document.forms[0].onsubmit = e => {
   inputCourse.value = '';
   inputAmount.value = '';
   checkBox.checked = false;
+  termsCheckbox.checked = false;
 
   checkout(orderData);
 };
