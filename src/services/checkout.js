@@ -1,8 +1,10 @@
 const axios = require('axios');
 
-const API = process.env.API;
-const MERCHANT = process.env.MERCHANT;
-const PASSWORD = process.env.PASSWORD;
+const isProd = process.env.ENV === 'production';
+
+const API = isProd ? process.env.PROD_API : process.env.TEST_API;
+const MERCHANT = isProd ? process.env.PROD_MERCHANT : process.env.TEST_MERCHANT;
+const PASSWORD = isProd ? process.env.PROD_PASSWORD : process.env.TEST_PASSWORD;
 
 async function openSession(order) {
   const config = {
@@ -18,24 +20,28 @@ async function openSession(order) {
     data: {
       apiOperation: 'INITIATE_CHECKOUT',
       interaction: {
+        timeout: '1800',
+        returnUrl: 'https://americanacademyeg.com',
         operation: 'PURCHASE',
         merchant: {
-          name: 'American Academy',
-          address: {},
+          name: MERCHANT,
         },
       },
       order: {
+        currency: order.currency || 'EGP',
         id: order.id,
-        currency: order.currency,
+        reference: order.id,
         amount: order.amount,
-        description: order?.description || 'Not Specified',
-        notificationUrl: 'https://americanacademyeg.com/webhook',
+        description: order.description || 'NA',
+      },
+      transaction: {
+        reference: 'QNBAA_2023',
       },
     },
   };
 
   const res = await axios(config);
-  return res.data?.session?.id;
+  return res.data.session;
 }
 
 module.exports = { openSession };

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://qnbalahli.test.gateway.mastercard.com/static/checkout/checkout.min.js"
+      data-cancel="https://americanacademyeg.com/checkout.html"
+      data-error="errorCallback"
+      data-complete="completeCallback"
+    ></script>
+
     <!--Page title-->
     <title>American Academy</title>
     <!--Meta types-->
@@ -374,7 +381,7 @@
                   Pay with <span class="span">Visa</span>, <span class="span">MasterCard</span> and
                   <span class="span">Meeza</span>
                 </h1>
-                <form name="checkout">
+                <form id="checkout-form" name="checkout-form">
                   <fieldset>
                     <legend class="text-light">Personal Details</legend>
                     <div class="form-group">
@@ -713,13 +720,6 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"
       crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://qnbalahli.gateway.mastercard.com/static/checkout/checkout.min.js"
-      data-cancel="https://americanacademyeg.com/checkout.html"
-      data-error="errorCallback"
-      data-complete="completeCallback"
     ></script>
 
     <script src="./js/checkout.js"></script>

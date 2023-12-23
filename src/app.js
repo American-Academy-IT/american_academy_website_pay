@@ -40,9 +40,9 @@ app.post(
       ...req.body,
     };
 
-    await addNewOrder(order);
-    const sessionId = await openSession(order);
-    return res.status(200).send({ sessionId });
+    const session = await openSession(order);
+    await addNewOrder(order); // store on db
+    return res.status(200).send(session);
   })
 );
 

@@ -1,3 +1,4 @@
+const checkoutForm = document.getElementById('checkout-form');
 const inputFullName = document.getElementById('full-name');
 const inputNationalId = document.getElementById('national-id');
 const inputPhone = document.getElementById('phone');
@@ -8,7 +9,7 @@ const checkBox = document.getElementById('checkbox');
 const inputInvalid = document.getElementById('invalid-input');
 const termsCheckbox = document.getElementById('terms-checkbox');
 
-document.forms[0].onsubmit = e => {
+checkoutForm.onsubmit = e => {
   e.preventDefault();
 
   if (
@@ -48,11 +49,11 @@ async function checkout(orderData) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(orderData),
     });
-    const { sessionId } = await res.json();
+    const session = await res.json();
 
     Checkout.configure({
       session: {
-        id: sessionId,
+        id: session.id,
       },
     });
     Checkout.showPaymentPage();
@@ -62,7 +63,7 @@ async function checkout(orderData) {
 }
 
 function errorCallback(error) {
-  alert(JSON.stringify(error.message || err));
+  alert(JSON.stringify(error.message || error));
 }
 
 function completeCallback(result) {
